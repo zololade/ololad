@@ -12,6 +12,7 @@ body{
 }
 main{
     height: 100vh;
+    padding-top: 1rem;
 }
 table{
     height: 95%;
