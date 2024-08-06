@@ -9,20 +9,12 @@ body{
     background: rgb(18, 18, 19);
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
-/* main{
-    height: 95vh;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-} */
 table{
-    /* height: 95%; */
-    /* margin: auto; */
     border-radius: 45px;
     background:linear-gradient(135deg, rgb(0 0 0 / 0%), rgb(18 18 18), rgb(38 38 41 / 35%));
-    min-width: 270px;
-    max-width: 270px;
+    width: 270px;
     overflow: hidden;
     max-height: 600px;
     border-spacing: 5px;
@@ -30,10 +22,8 @@ table{
     box-shadow:0px 0px 50px 20px #000000e0;
 }
 th{
-    width: 255px;
-    height: 225px;
-    position: relative;
     overflow: hidden;
+    padding-top: 200px;
 }
 #outputValue{
     color: #fafafb;
@@ -45,15 +35,11 @@ th{
     width: 255px;
 }
 div#output{
-    position: absolute;
     overflow: hidden;
-    right: 0;
-    bottom: 15px;
     width: 255px;
 }
 .btn td{
     text-align: center;
-    padding: 0;
     height: 60px;
 }
 .btn td input:not(#zero){
