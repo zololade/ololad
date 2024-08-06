@@ -8,8 +8,8 @@ body {
     width: 100vw;
     background: rgb(18, 18, 19);
     color: #d1d1d1;
-    font-size: 14px;
-    padding: 20px;
+    font-size: 0.95rem;
+    padding: 4.5vw;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -36,8 +36,6 @@ li {
     list-style-type: none;
     margin-bottom: .5rem;
 }
-
-
 h1{
     font-weight: lighter;
 }
@@ -50,22 +48,16 @@ p {
     padding-bottom: 1.5rem;
 }
 main {
-    display: flex;
-    /* background-color: rgb(67, 67, 88); */
+    padding: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to bottom right, #767d81, #767d8100,
+        #767d8100, #767d81) 1 round;
+   
 }
 .grid-container {
     display: grid;
 }
-
-
-
-
-
-
-
-
-
-
  .projects>li {
      border-left: 5px solid #65656594;
      padding-left: 2px;
@@ -81,15 +73,6 @@ main {
     h1 {
         font-size: 100px;
     }
-
-    main {
-        padding: 30px;
-        border-style: solid;
-        border-width: 2px;
-        border-image: linear-gradient(to bottom right, #767d81, #767d8100,
-                #767d8100, #767d81) 1 round;
-        border-radius: 2rem;
-    }
      .grid-container {
         grid-template-rows: 1fr 2fr;
         gap: 0rem 4rem;
@@ -100,19 +83,7 @@ main {
 }
 @media only screen and (min-width:960px) {
     main{
-        width: 960px;
-        padding: 30px;
-        margin: 30px;
-        border-style: solid;
-        border-width: 2px;
-        border-image: linear-gradient(to bottom right, #767d81,#767d8100,
-            #767d8100, #767d81) 1 round;
-        border-radius: 2rem;
-    }
-   .flex-container{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
+        max-width: 960px;
     }
     .grid-container{
         grid-template-columns: 2fr 1fr;
@@ -120,20 +91,17 @@ main {
     }
     h1 {
         font-size: 100px;
-    }
-    h1 {
         line-height: 1;
         padding-bottom: 20px;
         padding-top: 5px;
     }
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:630px) {
     h1 {
         font-size: 12vw;
     }
 
 }
-
 footer{
     text-align: left;
     align-self: end;
