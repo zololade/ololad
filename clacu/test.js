@@ -23,7 +23,7 @@ const calculator = document.querySelector(".Calculator");
         clearButton.value = "C";
       }
 // input number: first check if the key clicked is a number
-      if(Number(inputer) >= 0 && Number(inputer) <= 9) {
+      if((Number(inputer) >= 0 && Number(inputer) <= 9) ) {
             if(displayValue === "0" || 
               previousKeyType === "operator" ||
               previousKeyType === "calculation" ||      
@@ -32,7 +32,7 @@ const calculator = document.querySelector(".Calculator");
 // how number is handled on first of number click and 
 //after operators and calculations have beeen performed
               outputer.value = keyValue;
-            }else{
+            }else if(outputer.value.toString().length < 9){
 // number is handled on consecutive clicks
               outputer.value = displayValue + keyValue;  
             }
@@ -46,7 +46,8 @@ const calculator = document.querySelector(".Calculator");
           ){
 //how decimal is handled after operations and equal
             outputer.value = "0."
-          }else if( !displayValue.includes(".") ){   
+          }else if( !displayValue.includes(".") && 
+          outputer.value.toString().length < 9){   
 //how decimal is handled on consecutive clicks         
             outputer.value = displayValue + keyValue;
           }
