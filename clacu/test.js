@@ -18,7 +18,7 @@ const calculator = document.querySelector(".Calculator");
       const displayValue = outputer.value;
       const { previousKeyType } = calculator.dataset;
 // reseting the value of c
-if ((Number(inputer) >= 0 && Number(inputer) <= 9) || inputer === ".") {
+      if ((Number(inputer) >= 0 && Number(inputer) <= 9) || inputer === ".") {
         const clearButton = calculator.querySelector("#clear");
         clearButton.value = "C";
       }
@@ -88,7 +88,8 @@ if ((Number(inputer) >= 0 && Number(inputer) <= 9) || inputer === ".") {
 //so as to reset the values when clear is selected after calculatio
 //i.e equal to
             previousKeyType === "clear" ||
-            previousKeyType === "calculation"
+            previousKeyType === "calculation" ||
+            previousKeyType === "number" 
              ) {
 //revert the clear key value to its original state 
 // after operations have been completed 
@@ -98,6 +99,7 @@ if ((Number(inputer) >= 0 && Number(inputer) <= 9) || inputer === ".") {
             delete calculator.dataset.modValue 
             delete calculator.dataset.operator 
             delete calculator.dataset.previousKeyType
+            delete calculator.dataset.modifier        
           }
           key.value= "AC";
           outputer.value = '0';
@@ -115,48 +117,17 @@ if ((Number(inputer) >= 0 && Number(inputer) <= 9) || inputer === ".") {
 // previous key to percent
           calculator.dataset.previousKeyType = "percent";
         }else{
-
-          if(previousKeyType === "clear"){
-            delete calculator.dataset.operator 
-            delete calculator.dataset.firstNumber
-            // console.log(calculator.dataset.firstNumber)
-          }
-
-
 // what we are left with are the operators
 //so create memory variable, i.e variables that 
 //holds number used in calculation
-          let firstNumber = calculator.dataset.firstNumber
-
-
+          let firstNumber = calculator.dataset.firstNumber;
 //self invoking function I use to set second number 
 //between modifier and displayvalue
-          let secondNumber = (function(){
-            if (previousKeyType === "clear") return calculator.dataset.modifier
-            if (previousKeyType !== "clear") return displayValue;
-          })();
+          let secondNumber = displayValue;
+// create a modifier for operations after clear
           const modifier = calculator.dataset.modifier;
-
-
-
-//create an operator data attribut to store the type operator clicked in it
-          const operator = (function(){
-            if (previousKeyType === "clear") return key.dataset.key
-            if (previousKeyType !== "clear") return calculator.dataset.operator
-          })();
-
-
-
-
-          console.log(firstNumber)
-          console.log(secondNumber)
-          // console.log(modifier)
-          // console.log(operator)
-          
-          
-          
-
-
+//create an operator data attribute to store the type operator clicked in it
+          const operator = calculator.dataset.operator;
 //value i want to display when operator is clicked again after
 //clear
           if (previousKeyType === "clear" &&
@@ -164,52 +135,41 @@ if ((Number(inputer) >= 0 && Number(inputer) <= 9) || inputer === ".") {
             ) {
             outputer.value = calculator.dataset.modifier
           }
-//what to do when user clicks clear after an operator 
-//or clicks clear after a value
+//perform operation on values after
+//operator is clicked 
           if (
             firstNumber &&   
             secondNumber &&
             previousKeyType !== "operator" &&
-            previousKeyType !== "calculation"
+            previousKeyType !== "calculation" &&
+            previousKeyType !== "clear"
             ) {
-
-              // console.log(firstNumber)
-              // console.log(secondNumber)
-              // console.log(operator)
 //first check if first number and second number exist
 //the check if previous key is not operator & equal
             const calValue = calculate(firstNumber, operator, secondNumber);
             outputer.value = calValue;
             calculator.dataset.firstNumber = calValue;
-
-
+          }else if(
+            previousKeyType === "clear" &&
+            calculator.dataset.modifier
+            ){
+//the value for first number if operator was clicked 
+//after clear
+            calculator.dataset.firstNumber = calculator.dataset.modifier
           }else{
 //if first number doesnt exist set it to the displayed value
-// if number is then click after the first operator has been called
-//then the operator is called again update the firstnumber to current
-//dipalyed value
+// or update firstnumber after every operation
             calculator.dataset.firstNumber = displayValue;
           }
-// slef invoking function I used to create modifier
+// self invoking function I used to create modifier
             calculator.dataset.modifier = (function(){
             if (previousKeyType === "clear") return calculator.dataset.modifier
             if (previousKeyType !== "clear") return calculator.dataset.firstNumber
-          })();
-          
-          
+          })();     
 // store the type operator clicked 
           calculator.dataset.operator = key.dataset.key;
 // set previous key to operator
           calculator.dataset.previousKeyType = "operator";
-
-
-          
-
-
-
-
-
-
         }
     });
   }
