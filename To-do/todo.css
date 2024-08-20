@@ -24,7 +24,7 @@ main {
 }
 .menu-container {
   background-color: #202020;
-  padding: 10px 10px 10px 25px;
+  padding: 0px 15px 10px 25px;
   display: grid;
   grid-template-rows: 60px auto;
   gap: 30px;
@@ -33,10 +33,12 @@ main {
 }
 .menu-icon {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.menu-icon > h2 {
-  font-size: 2rem;
+.menu-icon > h2,
+.bar {
+  font-size: 1.6rem;
 }
 .main-nav {
   justify-self: center;
@@ -46,7 +48,7 @@ main {
 }
 .main-nav > h2 {
   margin-bottom: 5px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .nav-list {
   list-style-type: none;
@@ -91,9 +93,18 @@ main {
   flex: 27%;
   margin: 20px;
   background-color: 200px;
-  background-color: #323232;
   color: white;
   height: 200px;
   border-radius: 1rem;
   padding: 10px;
+}
+.sticky-item > div:not(:last-child) {
+  background-color: #323232;
+  box-shadow: 0px 0px 15px 5px #0000004d;
+}
+.add-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
 }
