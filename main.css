@@ -59,10 +59,10 @@ main {
   border-width: 2px;
   border-image: linear-gradient(
       to bottom right,
-      #767d81,
-      #767d8100,
-      #767d8100,
-      #767d81
+      #323232,
+      #32323200,
+      #32323200,
+      #323232
     )
     1 round;
 }
