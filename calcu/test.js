@@ -182,59 +182,51 @@ function calculate(x, operator, y) {
   x = parseFloat(x);
   y = parseFloat(y);
 
-  let addition = precisionRound(x + y, 10);
-  let subtraction = precisionRound(x - y, 10);
-  let multiplication = precisionRound(x * y, 100);
-  let divison = x / y;
+  const precisionRound = (value, precision) => {
+    const factor = Math.pow(10, precision);
+    return Math.round(value * factor) / factor;
+  };
 
-  if (operator === "plus") {
-    if (addition.toString().length > 9) {
-      return addition.toExponential(3);
-    } else {
-      return addition;
-    }
+  let result;
+  switch (operator) {
+    case "plus":
+      result = x + y;
+      break;
+    case "minus":
+      result = x - y;
+      break;
+    case "times":
+      result = x * y;
+      break;
+    case "divide":
+      result = x / y;
+      break;
+    default:
+      return "Invalid operator";
   }
-  if (operator === "minus") {
-    if (subtraction.toString().length > 9) {
-      return subtraction.toExponential(3);
-    } else {
-      return subtraction;
-    }
-  }
-  if (operator === "times") {
-    if (multiplication.toString().length > 9) {
-      return multiplication.toExponential(3);
-    } else {
-      return multiplication;
-    }
-  }
-  if (operator === "divide") {
-    if (divison.toString().length > 9) {
-      return divison.toExponential(3);
-    } else {
-      return divison;
-    }
+
+  if (result.toString().length > 9) {
+    return result.toExponential(3);
+  } else {
+    return result;
   }
 }
 // function for percent and negate operator
 function calcu(x, operator) {
   x = parseFloat(x);
-  let y = parseFloat(-1);
-  let z = parseFloat(100);
-  let negation = precisionRound(x * y, 150);
-  let percentage = precisionRound(x / z, 150);
+  const y = -1;
+  const z = 100;h
+  const negation = precisionRound(x * y, 150);
+  const percentage = precisionRound(x / z, 150);
 
   if (operator === "negate") return negation;
   if (operator === "percnt") {
-    if (percentage.toString().length > 9) {
-      return percentage.toExponential(1);
-    } else {
-      return percentage;
-    }
+    return percentage.toString().length > 9
+      ? percentage.toExponential(1)
+      : percentage;
   }
 }
 //MDN function
 function precisionRound(number, precision) {
-  let factor = Math.pow(10, precision);
-  return Math.round(number * factor) / factor;
+  return Math.round(number * Math.pow(10, precision)) / Math.pow(10, precision);
 }
