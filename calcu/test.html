@@ -1,59 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Akingbogun Zakariyau">
-    <meta name="description" content="Calculator">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Subheading.png" type="image/x-icon">
-    <link rel="stylesheet" href="test.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Akingbogun Zakariyau" />
+    <meta name="description" content="Calculator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Subheading.png" type="image/x-icon" />
+    <link rel="stylesheet" href="test.css" />
     <title>Calculator</title>
-</head>
-<body>
-<main>
-    <table class="Calculator">
+  </head>
+  <body>
+    <main>
+      <table class="Calculator">
         <tr>
-            <th colspan="4">
-                <div id="output">
-                    <input type="text" value="0" placeholder="0" disabled id="outputValue" maxlength="9">
-                </div>
-            </th>
+          <th colspan="4">
+            <div id="output">
+              <input
+                type="text"
+                value="0"
+                placeholder="0"
+                disabled
+                id="outputValue"
+                maxlength="9"
+              />
+            </div>
+          </th>
         </tr>
         <tr class="btn row1">
-            <td><input type="button" data-type="number" id="clear" value="AC"></td>
-            <td><input type="button" data-key="negate" data-type="operator" value="&#8314;&#8725;&#8331;"></td>
-            <td><input type="button" data-key="percnt" data-type="operator" value="&percnt;"></td>
-            <td><input type="button" data-key="divide" data-type="operator" value="&divide;" id="divide"></td>
+          <td>
+            <input type="button" data-type="number" id="clear" value="AC" />
+          </td>
+          <td>
+            <input
+              type="button"
+              data-key="negate"
+              data-type="operator"
+              value="&#8314;&#8725;&#8331;"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              data-key="percnt"
+              data-type="operator"
+              value="&percnt;"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              data-key="divide"
+              data-type="operator"
+              value="&divide;"
+              id="divide"
+            />
+          </td>
         </tr>
         <tr class="btn row2">
-            <td><input type="button" data-type="number" value="7"></td>
-            <td><input type="button" data-type="number" value="8"></td>
-            <td><input type="button" data-type="number" value="9"></td>
-            <td><input type="button" data-key="times" data-type="operator" value="&#xd7;"></td>
+          <td><input type="button" data-type="number" value="7" /></td>
+          <td><input type="button" data-type="number" value="8" /></td>
+          <td><input type="button" data-type="number" value="9" /></td>
+          <td>
+            <input
+              type="button"
+              data-key="times"
+              data-type="operator"
+              value="&#xd7;"
+            />
+          </td>
         </tr>
         <tr class="btn row3">
-            <td><input type="button" data-type="number" value="4"></td>
-            <td><input type="button" data-type="number" value="5"></td>
-            <td><input type="button" data-type="number" value="6"></td>
-            <td><input type="button" data-key="minus" data-type="operator" value="&minus;"></td>
+          <td><input type="button" data-type="number" value="4" /></td>
+          <td><input type="button" data-type="number" value="5" /></td>
+          <td><input type="button" data-type="number" value="6" /></td>
+          <td>
+            <input
+              type="button"
+              data-key="minus"
+              data-type="operator"
+              value="&minus;"
+            />
+          </td>
         </tr>
         <tr class="btn row4">
-            <td><input type="button" data-type="number" value="1"></td>
-            <td><input type="button" data-type="number" value="2"></td>
-            <td><input type="button" data-type="number" value="3"></td>
-            <td><input type="button" data-key="plus" data-type="operator" value="&plus;"></td>
+          <td><input type="button" data-type="number" value="1" /></td>
+          <td><input type="button" data-type="number" value="2" /></td>
+          <td><input type="button" data-type="number" value="3" /></td>
+          <td>
+            <input
+              type="button"
+              data-key="plus"
+              data-type="operator"
+              value="&plus;"
+            />
+          </td>
         </tr>
         <tr class="btn row5">
-            <td colspan="2"><input type="button" value="0" id="zero"></td>
-            <td><input type="button" data-type="number" value="."></td>
-            <td><input type="button" value="=" data-type="equal"></td>
+          <td colspan="2"><input type="button" value="0" id="zero" /></td>
+          <td><input type="button" data-type="number" value="." /></td>
+          <td><input type="button" value="=" data-type="equal" /></td>
         </tr>
-    </table>
-</main>
+      </table>
+    </main>
 
-
-
-
-<script src="test.js"></script>
-</body>
+    <script src="test.js"></script>
+  </body>
 </html>
