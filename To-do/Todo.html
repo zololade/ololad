@@ -11,41 +11,51 @@
   </head>
   <body>
     <header>
-      <nav>
-        <h3>Task</h3>
-        <ul>
+      <div class="menu-container">
+      <div class="menu-icon">
+        <h2>Menu</h2>
+      </div>
+
+      <nav class="main-nav">
+        <h2>Tasks</h2>
+        <ul class="nav-list">
           <li>upcoming</li>
           <li>today</li>
           <li>calender</li>
-          <li>st</li>
+          <li>sticky</li>
         </ul>
+      </div>
       </nav>
       <footer></footer>
     </header>
     <main>
-      <section>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis error
-          quod porro quos molestiae recusandae, ratione minima dicta aperiam
-          quasi numquam, ullam repudiandae ducimus eius. Inventore, itaque vero?
-          Odit, et?
-        </div>
-        <div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
-          doloremque accusantium voluptatem at nemo consequatur enim recusandae
-          unde repudiandae minus mollitia, possimus quae laborum. Sequi
-          molestiae odit adipisci optio consequuntur!
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-          possimus! Ipsa quaerat dolores nulla est expedita nisi ipsum sunt
-          consectetur voluptas autem. Fuga optio quas distinctio omnis?
-          Consequuntur, numquam mollitia.
+      <section id="upcoming">
+        <table>
+          <tr>
+            <th>Tomorrow</th>
+          </tr>
+          <tr>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              pariatur sapiente molestiae magnam repudiandae atque libero ut
+              repellendus, vitae error, numquam recusandae cum aspernatur
+              inventore, facilis necessitatibus quam sint dolor.
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id="today">today</section>
+      <section id="calender">calender</section>
+      <section class="sticky">
+        <h2>Sticky Wall</h2>
+        <div class="sticky-item">
+          <div>box 1</div>
+          <div>box 2</div>
+          <div>box 3</div>
+          <div>box 4</div>
+          <div>box 5</div>
         </div>
       </section>
-      <section>today</section>
-      <section>calender</section>
-      <section>sticky</section>
     </main>
   </body>
 </html>
