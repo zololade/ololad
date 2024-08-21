@@ -148,5 +148,5 @@ main {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #5555559d;
+  background: #aaaaaa;
 }
