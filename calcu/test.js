@@ -208,18 +208,27 @@ const operations = {
   plus: (x, y) => x + y,
   minus: (x, y) => x - y,
   times: (x, y) => x * y,
-  divide: (x, y) => (y !== 0 ? x / y : "Error"),
+  divide: (x, y) => {
+    if (y === 0) {
+      return "Error";
+    }
+    return x / y;
+  },
 };
 
 const calculate = (x, operator, y) => {
-  if (!operations[operator]) {
-    return "Error";
-  }
-
   const num1 = parseFloat(x);
   const num2 = parseFloat(y);
-
   const result = operations[operator](num1, num2);
+
+  if (
+    !operations[operator] ||
+    isNaN(result) ||
+    result === Infinity ||
+    result === -Infinity
+  ) {
+    return "Error";
+  }
 
   const negativeThreshold = 1e-7;
   const threshold = 1e8;
@@ -247,7 +256,7 @@ const calculate = (x, operator, y) => {
       if (Math.abs(result) < negativeThreshold) {
         return result.toExponential(1);
       } else {
-        return result.toString().length > 9 ? result.toPrecision(9) : result;
+        return result.toString().length > 9 ? result.toPrecision(1) : result;
       }
     default:
       return typeof result === "number" && result.toString().length > 9
