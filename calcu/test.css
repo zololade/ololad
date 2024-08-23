@@ -3,10 +3,20 @@
   margin: 0;
   padding: 0;
 }
+html {
+  background-color: #292929;
+}
 body {
   height: 100vh;
   width: 100vw;
-  background: #202020;
+  background-image: linear-gradient(
+    to top right,
+    #1212123f,
+    #12121291,
+    #121212,
+    #12121291,
+    #12121248
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +37,7 @@ th {
   padding-top: 200px;
 }
 #outputValue {
-  color: #fafafb;
+  color: #ffffff;
   text-align: right;
   background: transparent;
   border: none;
