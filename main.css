@@ -29,7 +29,16 @@ body {
     sans-serif;
 }
 
-p,
+p {
+  text-indent: 2rem;
+  word-spacing: 0.2rem;
+  line-height: 1.5;
+}
+
+.p2 {
+  padding-top: 1rem;
+}
+
 .projects li {
   line-height: 1.6rem;
 }
@@ -132,10 +141,6 @@ h2 {
   font-weight: 450;
   line-height: 1;
   margin-bottom: 1rem;
-}
-
-p {
-  padding-bottom: 1.5rem;
 }
 
 main {
