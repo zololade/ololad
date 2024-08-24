@@ -92,9 +92,9 @@ p,
   border-right: 3px solid #ffffff61;
   will-change: width, border-right;
   -webkit-animation: -webkit-blink-caret 1s step-end 2,
-    -webkit-typing 3.5s steps(50, end) 0.5s 1 normal forwards;
+    -webkit-typing 3.5s steps(50, end) 2s 1 normal forwards;
   animation: blink-caret 1s step-end 2,
-    typing 3.5s steps(50, end) 1.5s 1 normal both;
+    typing 3.5s steps(50, end) 2s 1 normal both;
 }
 
 @keyframes blink-caret {
