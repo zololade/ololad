@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   background-color: #292929;
 }
@@ -10,14 +11,13 @@ html {
 body {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(
-    to top right,
-    #1212123f,
-    #12121291,
-    #121212,
-    #12121291,
-    #12121248
-  );
+  background-image: linear-gradient(to top right,
+      #1212123f,
+      #12121291,
+      #121212,
+      #12121291,
+      #12121248);
+  overflow: hidden;
   color: #ffffff;
   font-size: 0.95rem;
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
@@ -42,7 +42,7 @@ body {
   font-size: 1.6rem;
 }
 
-.menu-icon > h2,
+.menu-icon>h2,
 .menu-bar {
   font-size: 1.6rem;
 }
@@ -54,7 +54,7 @@ body {
   width: 100%;
 }
 
-.main-nav > h2 {
+.main-nav>h2 {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
@@ -63,20 +63,21 @@ body {
   list-style-type: none;
 }
 
-.nav-list > li {
+.nav-list>li {
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin: 0 0.5rem 0.5rem;
 }
 
-.nav-list > li:hover {
-  background-color: #272727;
-}
-.nav-list > .active {
+.nav-list>li:hover {
   background-color: #272727;
 }
 
-.nav-list > li > i {
+.nav-list>.active {
+  background-color: #272727;
+}
+
+.nav-list>li>i {
   padding-right: 1rem;
 }
 
@@ -89,7 +90,7 @@ body {
   padding: 0;
 }
 
-.sticky > h2 {
+.sticky>h2 {
   font-size: 2rem;
   padding: 1.5rem 0rem 0rem 2.5rem;
 }
@@ -105,16 +106,16 @@ body {
   padding: 2rem 2.5rem 5rem 2.5rem;
 }
 
-.sticky-item > aside {
+.sticky-item>aside {
   border-radius: 0.5rem;
 }
 
-.sticky-item > aside {
+.sticky-item>aside {
   background-color: #1e1e1e;
   overflow: hidden;
 }
 
-.sticky-item > aside .data {
+.sticky-item>aside .data {
   padding: 1rem;
   font-family: "Courier New", Courier, monospace;
   text-align: left;
@@ -128,22 +129,4 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-}
-
-/* Scrollbar styles */
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(241, 241, 241, 0);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #29292981;
-  border-radius: 0.5rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #292929;
 }
