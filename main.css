@@ -90,7 +90,6 @@ p,
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #ffffff61;
-  /* margin: 0 auto; */
   will-change: width, border-right;
   -webkit-animation: -webkit-blink-caret 0.5s step-end 3,
     -webkit-typing 3.5s steps(50, end) 0.5s 1 normal forwards;
