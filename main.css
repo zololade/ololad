@@ -3,20 +3,20 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   background-color: #292929;
 }
+
 body {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(
-    to top right,
-    #1212123f,
-    #12121291,
-    #121212,
-    #12121291,
-    #12121248
-  );
+  background-image: linear-gradient(to top right,
+      #1212123f,
+      #12121291,
+      #121212,
+      #12121291,
+      #12121248);
   color: #ffffff;
   font-size: 0.95rem;
   padding: 4.5vw;
@@ -28,10 +28,12 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 }
+
 p,
 .projects li {
   line-height: 1.6rem;
 }
+
 .nav-grid {
   display: flex;
   flex-direction: row;
@@ -39,15 +41,18 @@ p,
   width: 100%;
   align-items: center;
 }
+
 .social-icons {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 8rem;
 }
+
 .mail,
 .github {
   text-align: center;
 }
+
 .fa-github,
 .fa-envelope {
   font-size: 2rem;
@@ -55,42 +60,51 @@ p,
   transition: color 0.3s ease-out;
   -webkit-transition: color 0.3s ease-out;
 }
+
 .fa-github:hover,
 .fa-envelope:hover {
   color: #ffffff;
 }
+
 .logo {
   margin-left: 1rem;
 }
+
 #logo {
   height: 40px;
   width: auto !important;
 }
+
 .title-box {
   display: flex;
   justify-content: center;
 }
+
 .title {
   width: fit-content;
   height: fit-content;
 }
+
 .title h1 {
-  width: 0;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #ffffff61;
-  margin: 0 auto;
-  -webkit-animation: -webkit-typing 3.5s steps(50, end) 0.5s 1 normal forwards,
-    -webkit-blink-caret 0.5s step-end 3;
-  animation: typing 3.5s steps(50, end) 1.5s 1 normal forwards,
-    blink-caret 0.5s step-end 3;
+  /* margin: 0 auto; */
+  will-change: width, border-right;
+  -webkit-animation: -webkit-blink-caret 0.5s step-end 3,
+    -webkit-typing 3.5s steps(50, end) 0.5s 1 normal forwards;
+  animation: blink-caret 0.5s step-end 3,
+    typing 3.5s steps(50, end) 1.5s 1 normal both;
 }
 
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-right-color: #ffffff61;
   }
@@ -98,8 +112,9 @@ p,
 
 @keyframes typing {
   from {
-    width: 0;
+    width: 0%;
   }
+
   to {
     width: 100%;
   }
@@ -109,35 +124,37 @@ li {
   list-style-type: none;
   margin-bottom: 0.5rem;
 }
+
 h1 {
   font-weight: lighter;
 }
+
 h2 {
   font-weight: 450;
   line-height: 1;
   margin-bottom: 1rem;
 }
+
 p {
   padding-bottom: 1.5rem;
 }
+
 main {
   padding: 30px;
   border-style: solid;
   border-width: 2px;
-  border-image: linear-gradient(
-      to top left,
+  border-image: linear-gradient(to top left,
       #292929,
       #29292900,
       #29292900,
-      #292929
-    )
-    2 round;
+      #292929) 2 round;
 }
 
 .grid-container {
   display: grid;
 }
-.projects > li {
+
+.projects>li {
   border-left: 5px solid #292929;
   background-image: none;
   padding-left: 2px;
@@ -147,7 +164,8 @@ main {
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
 }
-.projects > li:hover {
+
+.projects>li:hover {
   background-image: linear-gradient(to right, #292929, #29292900, #29292900);
   padding-left: 5px;
 }
@@ -156,47 +174,58 @@ li a {
   text-decoration: none;
   color: #d1d1d1;
 }
+
 @media only screen and (max-width: 960px) {
   h1 {
     font-size: 100px;
     line-height: 1;
   }
+
   .title {
     margin-bottom: 20px;
     margin-top: 5px;
   }
+
   .grid-container {
     grid-template-rows: 1fr 2fr;
     gap: 0rem 4rem;
   }
+
   .item1 {
     grid-area: 2 / 1 / 3 / 2;
   }
+
   .item2 {
     grid-area: 1 / 1 / 2 / 2;
   }
 }
+
 @media only screen and (min-width: 960px) {
   main {
     max-width: 960px;
   }
+
   .grid-container {
     grid-template-columns: 2fr 1fr;
     gap: 0rem 4rem;
   }
+
   h1 {
     font-size: 100px;
   }
+
   .title {
     margin-bottom: 20px;
     margin-top: 5px;
   }
 }
+
 @media only screen and (max-width: 630px) {
   h1 {
     font-size: 12vw;
   }
 }
+
 footer {
   text-align: left;
   align-self: end;
