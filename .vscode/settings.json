@@ -1,4 +1,5 @@
 {
   "livePreview.defaultPreviewPath": "/calcu/test.html",
-  "cSpell.language": "en,lorem"
+  "cSpell.language": "en,lorem",
+  "liveServer.settings.port": 5501
 }
