@@ -40,7 +40,7 @@ table {
 .btn td {
   text-align: center;
   height: 4rem;
-  width: fit-content;
+  width: 4rem;
   transition: width 0.1s;
 }
 
