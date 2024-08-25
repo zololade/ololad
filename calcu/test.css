@@ -41,7 +41,6 @@ table {
   text-align: center;
   height: 4rem;
   width: fit-content;
-  transition: width 0.1s;
 }
 
 .btn td input:not(#zero) {
