@@ -38,7 +38,7 @@ table {
 }
 
 .btn td {
-  text-align: center;
+  background-color: yellow;
   height: 4rem;
   width: 4rem;
   transition: width 0.1s;
