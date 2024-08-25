@@ -3,84 +3,93 @@
   margin: 0;
   padding: 0;
 }
+
 html {
-  background-color: #292929;
+  background-color: #121212;
 }
+
 body {
-  height: 100vh;
-  width: 100vw;
-  background-image: linear-gradient(
-    to top right,
-    #1212123f,
-    #12121291,
-    #121212,
-    #12121291,
-    #12121248
-  );
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2.5rem 0rem;
 }
+
 table {
-  border-radius: 45px;
-  background: linear-gradient(
-    135deg,
-    rgb(0 0 0 / 0%),
-    rgb(18 18 18),
-    rgb(38 38 41 / 35%)
-  );
-  border-spacing: 5px;
-  padding: 0 8px 40px 8px;
-  box-shadow: 0px 0px 50px 20px #000000e0;
+  border-radius: 4.5rem;
+  background: linear-gradient(135deg,
+      rgb(0 0 0 / 0%),
+      rgb(18 18 18),
+      rgb(38 38 41 / 35%));
+  border-spacing: 0.4rem;
+  padding: 15rem 0.8rem 4rem 0.8rem;
+  box-shadow: 0rem 0rem 5rem 2rem #000000e0;
+  width: 0;
 }
-th {
-  padding-top: 200px;
-}
+
 #outputValue {
   color: #ffffff;
   text-align: right;
   background: transparent;
   border: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 43px;
-  width: 255px;
+  font-size: 3rem;
+  width: 100%;
 }
+
 .btn td {
   text-align: center;
-  height: 60px;
-}
-.btn td input:not(#zero) {
-  width: 60px;
+  height: 4rem;
   transition: width 0.1s;
 }
+
+.btn td input:not(#zero) {
+  width: 4rem;
+  transition: width 0.1s;
+}
+
 #zero {
   width: 100%;
 }
+
 .btn td input {
   height: 100%;
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 100;
-  border-radius: 20px;
-  box-shadow: 0px 0px 5px #000000, 0px 0px 20px #0000007d;
+  border-radius: 1.45rem;
+  box-shadow: 0rem 0rem 0.5rem #000000, 0rem 0rem 2rem #0000007d;
   color: #ced3ef;
-  border: 3px solid #292c33;
+  border: 0.3rem solid #292c33;
   background: linear-gradient(135deg, #25272b, #262931, #292c33);
   transition: height 0.1s;
 }
+
 .btn.row1 td input:not(#divide) {
-  border: 3px solid #415070;
+  border: 0.3rem solid #415070;
   background: linear-gradient(135deg, #354863, #364864, #445579);
 }
+
 .btn td:last-child input {
-  border: 3px solid #ff6800;
+  border: 0.3rem solid #ff6800;
   background: linear-gradient(135deg, #ee2200, #fe4e00, #fe6100);
 }
+
 .btn td input:hover {
   height: 90%;
   transition-timing-function: linear;
-  font-size: 20px;
+  font-size: 1.55rem;
 }
+
+.btn td input:active {
+  height: 85%;
+  font-size: 1.5rem;
+}
+
 .btn td input:not(#zero):hover {
-  width: 55px;
+  width: 3.9rem;
   transition-timing-function: linear;
+}
+
+.btn td input:not(#zero):active {
+  width: 85%;
 }
