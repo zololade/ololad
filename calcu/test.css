@@ -38,7 +38,7 @@ table {
 }
 
 .btn td {
-  background-color: yellow;
+  background-color: green;
   height: 4rem;
   width: 4rem;
   transition: width 0.1s;
