@@ -24,7 +24,7 @@ table {
   border-spacing: 0.4rem;
   padding: 15rem 0.8rem 4rem 0.8rem;
   box-shadow: 0rem 0rem 5rem 2rem #000000e0;
-  width: 0;
+  max-width: 17.2rem;
 }
 
 #outputValue {
