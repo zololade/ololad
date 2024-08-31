@@ -7,7 +7,7 @@
     <meta name="description" content="To-Do list project" />
     <link rel="icon" href="/Subheading.png" />
     <link rel="stylesheet" href="todo.css" />
-    <link rel="stylesheet" href="/font/css/all.css" />
+    <link rel="stylesheet" href="/font/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,53 +17,39 @@
     <title>To-Do List</title>
   </head>
   <body>
-    <header>
-      <div class="menu-container">
-      <div class="menu-icon">
-        <h2>Menu</h2>
+    <aside class="nav-grid">
+      <div class="logo">
+        <a href="/"
+          ><img
+            src="/Subheading.png"
+            alt="logo"
+            height="207"
+            width="179"
+            id="logo"
+        /></a>
       </div>
+      <div class="nav-toggle">&#9776;</div>
+    </aside>
+    <section class="section">
+      <header>
+        <h1>Sticky Wall</h1>
+      </header>
 
-      <nav class="main-nav">
-        <h2>Tasks</h2>
-        <ul class="nav-list">
-          <li>
-            <i class="fa-solid fa-forward"></i>
-            <span>Upcoming</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-calendar-days"></i>
-            <span>Today</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-            <span>Calender</span>
-          </li>
-          <li class="active">
-            <i class="fa-solid fa-sticky-note" aria-hidden="true"></i>
-            <span>Sticky</span> 
-          </li>
-        </ul>
-      </div>
-      </nav>
-      <footer></footer>
-    </header>
-    <main>
-      <section class="sticky">
-        <h2>Sticky Wall</h2>
-        <article class="sticky-item">
-            <aside>
-              <div class="data">
-               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               </p>
-              </div>
-            </aside>
-            <aside></aside>
-            <aside></aside>
-            <aside></aside>
-            <aside class="add-note"><i class="fa-regular fa-plus" aria-hidden="true"></i></aside>
-        </article>
-      </section>
-    </main>
+      <main class="main">
+        <div class="sticky">
+          <aside>
+            <div class="data">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </aside>
+          <aside></aside>
+          <aside></aside>
+          <aside></aside>
+          <aside class="add-note">
+            <i class="fa-regular fa-plus" aria-hidden="true"></i>
+          </aside>
+        </div>
+      </main>
+    </section>
   </body>
 </html>
